@@ -3,6 +3,9 @@ const app = express()
 const mongoose = require("moongose")
 const port = 5001;
 
+app.use('/', require('./routes'))
+
+
 app.get('/ping', (req, res) => {
     return res.status(200).json({
         message: "Backend Testing"
